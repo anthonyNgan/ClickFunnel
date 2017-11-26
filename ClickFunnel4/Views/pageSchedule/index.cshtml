@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+@RenderPage("~/Views/navigation/_navigation02.cshtml")
+
+<html>
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <link rel="stylesheet" href="~/Content/bootstrap-theme.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        .heading {
+            font-size: 44px;
+            line-height: 1.3em;
+            text-align: center;
+        }
+
+        .content {
+            font-size: 23px;
+            line-height: normal;
+            text-align: center;
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+        }
+
+        .myfunction {
+            position: relative;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="heading">
+            <p>Schedule Your iRefi 3 Step Strategy Session With One Of Our Mortgage Advisers Now</p>
+        </div>
+
+        <div class="content">
+            <br>
+            <p>
+                Once you have scheduled a time with an Adviser, you will be redirected to the iRefi Finanical Snapshot.
+                Please ensure you complete this to secure your breakthrough strategy session.
+            </p>
+            <br>
+        </div>
+
+        <br>
+        <br>
+        <div class="content">
+            <p>"No strategy session required, I just want a notification for lowest rates on my next mortgage renewal."</p>
+        </div>
+        <span class="container">
+            <button id="myFunction" class="btn btn-primary center-block" onclick="location.href='https://app.irefi.co.nz/Account/Register?s=true'"
+                    style="padding:5px 10px; font-size:22px; height:100px;">
+                Take your Mortgage Snapshot >>
+            </button>
+        </span>
+        <br>
+
+
+        <div align="center" style="height:100%;margin:auto;"><div id="SOIDIV_iRefi-Adviser"></div></div>
+        <script type="text/javascript" src="//cdn.scheduleonce.com/mergedjs/ScheduleOnceEmbed.js"></script>
+        <script type="text/javascript">
+            (function () {
+                function SOEScriptLoaded() {
+                    if (typeof soe != 'undefined')
+                    { soe.AddEventListners("//meetme.so/iRefi-Adviser?brdr=1pxd8d8d8&dt=&em=1", "iRefi-Adviser", "635px", "100% !important", "false", "false"); }
+                    else { setTimeout(SOEScriptLoaded, 1); }
+                } setTimeout(SOEScriptLoaded, 1)
+            })()</script>
+        @RenderPage("~/Views/footer/_footer.cshtml");
+    </div>
+</body>
+
+</html>
