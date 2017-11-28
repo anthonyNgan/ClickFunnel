@@ -38,14 +38,15 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <br><br>
+    <div class="container" style="padding: 10px 20px; ">
 
         <div class="heading">
             <p>Schedule Your iRefi 3 Step Strategy Session With One Of Our Mortgage Advisers Now</p>
         </div>
 
         <div class="content">
-            <br>
+            
             <p>
                 Once you have scheduled a time with an Adviser, you will be redirected to the iRefi Finanical Snapshot.
                 Please ensure you complete this to secure your breakthrough strategy session.
@@ -53,20 +54,7 @@
             <br>
         </div>
 
-        <br>
-        <br>
-        <div class="content">
-            <p>"No strategy session required, I just want a notification for lowest rates on my next mortgage renewal."</p>
-        </div>
-        <span class="container">
-            <button id="myFunction" class="btn btn-primary center-block" onclick="location.href='https://app.irefi.co.nz/Account/Register?s=true'"
-                    style="padding:5px 10px; font-size:22px; height:100px;">
-                Take your Mortgage Snapshot >>
-            </button>
-        </span>
-        <br>
-
-
+        
         <div align="center" style="height:100%;margin:auto;"><div id="SOIDIV_iRefi-Adviser"></div></div>
         <script type="text/javascript" src="//cdn.scheduleonce.com/mergedjs/ScheduleOnceEmbed.js"></script>
         <script type="text/javascript">
@@ -77,8 +65,24 @@
                     else { setTimeout(SOEScriptLoaded, 1); }
                 } setTimeout(SOEScriptLoaded, 1)
             })()</script>
-        @RenderPage("~/Views/footer/_footer.cshtml");
-    </div>
+        <br>
+        <div class="content">
+            <p>"No strategy session required, I just want a notification for lowest rates on my next mortgage renewal."</p>
+        </div>
+
+        <div class="container">
+            <span class="container" style="padding: 0px 1px;">
+                <button id="myFunction" class="btn btn-primary center-block" onclick="location.href='https://app.irefi.co.nz/Account/Register?s=true'"
+                        style="padding:0px 1px; font-size:22px; height:100px;">
+                    Take your Mortgage Snapshot <br>>>
+                </button>
+            </span>
+            </div>
+            
+        </div>
+
+    <br><br>
+    @RenderPage("~/Views/footer/_footer.cshtml")
 </body>
 
 </html>

@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
+    <meta charset="utf-8" /> 
     <link rel="stylesheet" href="~/Content/bootstrap.css" />
     <link rel="stylesheet" href="~/Content/bootstrap-theme.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -16,16 +16,21 @@
         font-size: 20px;
         font-family: Arial;
         font-weight: 500;
+        text-align:center;
     }
 
     div.container-border {
-        margin: 50px 50px 0px;
+        margin: 50px 25px 0px;
         border-radius: 10px;
-        border-width: 1px;
+        border-width: 100%;
         border-style: solid;
         background-color: rgba(238, 238, 238, 0.86);
         border-color: rgb(255, 255, 255);
         margin: 0px;
+    }
+    .myfunction {
+        position: relative;
+        display: block;
     }
 </style>
 <html>
@@ -33,37 +38,42 @@
     <title></title>
 </head>
 <body>
+    <br><br>
     <div class="container">
-        <div class="container-border" style="padding:10px;">
+        <div class="container-border" style="padding:5px 10px;">
             <d>Step One: <strong style="color:red; font-weight:600; font-size:28px;">Watch This Video Case Study Right Now</strong></d>
         </div>
-        <div class="container" style="padding:10px 5px;">
+        <div class="container" style="padding:10px 55px;">
             <div class="embed-responsive embed-responsive-16by9" >
-                <iframe class="embed-responsive-item" width="960" height="540" src="https://www.youtube.com/embed/Mq0pN0osOVQ?autoplay=1" frameborder="0" gesture="media" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" width="1280" height="720" src="https://www.youtube.com/embed/Mq0pN0osOVQ?autoplay=1" frameborder="0" gesture="media" allowfullscreen></iframe>
             </div>
         </div>
         <div class="container">
-            <div class="container-border" style="padding:10px;">
+            <div class="container-border" style="padding:5px 10px;">
                 <d>Step Two: <strong style="color:red; font-weight:600; font-size:28px;">Apply Now To See If You Qualify</strong></d>
             </div>
         </div>
         <br>
         <div class="row">
             <div class="container">
-                <div class="container">
-                    <d>
+                <div class="container" style="width: 90%; word-break: keep-all; padding:0px 5px;" >
+                    <d class="center-block">
                         Now that you’ve absorbed all the case studies above and if you feel you’re ready to
                         take the FIRST STEP to lower rates… Apply to see if there are other steps you may
                         take to improve your current situation right now. Takes less than 90 seconds
                     </d>
+
                 </div>
-            </div>
-            <br>
-            <div class="container">
-                <span class="container">
-                    <button id="myFunction" class="btn btn-primary center-block" onclick="location.href='/Views/pageSchedule/index.cshtml'" style="padding:5px 20px; font-size:22px; height:100px;">Apply Now To See If You Qualify >></button>
-                </span>
                 <br>
+                <div class="container">
+                    <span class="container" style="padding: 0px 2px;">
+                        <button id="myFunction" class="btn btn-primary center-block" onclick="location.href='/Views/pageSchedule/index.cshtml'"
+                                style="padding:5px -10px; font-size:22px; height:100px; max-width:150%;">
+                            Apply Now To See<br>If You Qualify >>
+                        </button>
+                    </span>
+                    <br>
+                </div>
             </div>
         </div>
     </div>
@@ -71,6 +81,7 @@
         document.getElementById("myFunction").onclick = function () {
             location.href = "'/Views/pageSchedule/index.cshtml'";
     </script>
-    @RenderPage("~/Views/footer/_footer.cshtml");
+    <br><br>
+    @RenderPage("~/Views/footer/_footer.cshtml")
 </body>
 </html>
